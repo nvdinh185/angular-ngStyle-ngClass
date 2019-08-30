@@ -1,0 +1,17 @@
+<!-- ngStyle dùng để khai báo nhiều style liên tiếp nhau trong một biểu thức -->
+
+<!-- Sử dụng ngStyle để khai báo nhiều thuộc tính style trong 1 oject -->
+<p [ngStyle]='{ color: "red", fontSize: "20px"}'>My name is Định</p>
+<!-- Định nghĩa biến trong file ts rồi sử dụng ngStyle để gọi biến -->
+<h3 [ngStyle]="evenStyle">Your name is Định</h3>
+
+<input placeholder="Enter your username" [(ngModel)]="name">
+<!-- Khi chiều dài biến name chia hết cho 2 hay không -->
+<!-- thì sử dụng style đã khai báo ở file ts -->
+<h3 [ngStyle]="name.length%2==0? evenStyle : oddStyle">Your name is {{ name }}</h3>
+<p>..............</p>
+
+<!-- ngClass dùng để gọi class với điều kiện -->
+<div [ngClass]="{ circle : isHighLight, square : !isHighLight }"></div>
+<!-- Cách viết ngắn gọn hơn là khai báo biến ở file ts và sử dụng ở file html -->
+<div [ngClass]="b"></div>

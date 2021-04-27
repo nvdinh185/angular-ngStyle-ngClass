@@ -1,0 +1,6 @@
+<h3 [ngStyle]="{color: 'red', backgroundColor: 'gray'}">Hello</h3>
+<h3 [ngStyle]="currentStyle">Hello</h3>
+<h3 [ngStyle]="style?currentStyle: noStyle">Hello</h3>
+
+<div [ngClass]="{circle: style, square: !style}"></div>
+<div [ngClass]="myClass"></div>
